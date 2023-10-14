@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function MultipelCard(image,name){
+            var card={
+                width:"300px",
+                padding:"10px",
+                baoxShadow:"0 0 10px black",
+                margin:"50px auto",
+                textAlign:"center",
+            }
+            return(
+                <div style={card}>
+                    <img src={image} width="100%" height="250"/>
+                    <h3>{name}</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, libero!</p>
+                </div>
+            );
+        }
+
+        function Main(){
+            var style={
+                display:"flex",
+            };
+            return(
+               < div style={style}>
+
+               {MultipelCard("https://www.google.com/imgres?imgurl=https%3A%2F%2Findianwomennetwork.com%2Fwp-content%2Fuploads%2F2022%2F02%2Fslider-women-final-1.png&tbnid=s15RfOleYpdo6M&vet=12ahUKEwjzgIm7zuuBAxVsk2MGHZfYBBoQMygCegQIARBT..i&imgrefurl=https%3A%2F%2Findianwomennetwork.com%2F&docid=AwuJ5P5EBolzIM&w=6876&h=4912&q=women&ved=2ahUKEwjzgIm7zuuBAxVsk2MGHZfYBBoQMygCegQIARBT"
+               ,
+               "siya")}
+
+               {MultipelCard("https://www.google.com/imgres?imgurl=https%3A%2F%2Findianwomennetwork.com%2Fwp-content%2Fuploads%2F2022%2F02%2Fslider-women-final-1.png&tbnid=s15RfOleYpdo6M&vet=12ahUKEwjzgIm7zuuBAxVsk2MGHZfYBBoQMygCegQIARBT..i&imgrefurl=https%3A%2F%2Findianwomennetwork.com%2F&docid=AwuJ5P5EBolzIM&w=6876&h=4912&q=women&ved=2ahUKEwjzgIm7zuuBAxVsk2MGHZfYBBoQMygCegQIARBT"
+               ,
+               "siya")}
+               </div>
+
+            );
+        }
+        ReactDOM.render(Main(),document.getElementById("root"));
+    </script>
+</body>
+</html>

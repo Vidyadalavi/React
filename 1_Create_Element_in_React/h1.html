@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Create element by using React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+<script>
+//Create element in React
+   let elementRef= React.createElement("h1",null,"Heading Element");
+//Add to the Dom
+ReactDOM.render(elementRef,document.getElementById("root"))
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Create element by using React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+<script>
+//Create element in React <div><button><p></p></button></div>
+   let elementRef= React.createElement("div",null,
+    [React.createElement("button",null,"Login"), React.createElement("p",null,"lorem10")]);
+//Add to the Dom
+ReactDOM.render(elementRef,document.getElementById("root"))
+</script>
+</body>
+</html>

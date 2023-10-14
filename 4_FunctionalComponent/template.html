@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    //in react function component always write Function name in capital
+function Function1(prop){
+    var Style={
+        backgroundColor:"red",
+        border:"1px solid black",
+        margin:"50px auto",
+        textAlign:"center",
+    }
+    return(
+    <div style={Style}>
+    <h2> {prop.name}Element</h2>
+    <button>{prop.name} button</button>
+    </div>)
+}
+
+            
+function Main(){
+    return(
+        <div>
+            <Function1 name={"React "} />
+            <Function1 name={"Anaguler "}/>
+            <Function1 name={"Node js "}/>
+        </div>
+    )
+}
+
+ReactDOM.render(<Main/>,document.getElementById("root"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>use functional component</title>
+ <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div Id="root"></div>
+
+    <script type="text/babel">
+      
+      function CreateCard(prop){
+
+                var card={
+                    height:"350px",
+                    width:"250px",
+                    textAlign:"center",
+                    padding:"5px",
+                    boxShadow:" 0 0 10px black"
+                }
+             
+   return(
+      <div style={card}>
+          <img src={prop.image} width="100px" height="100px"/>
+          <h3>{prop.name}</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, recusandae.</p>
+          <button>login</button>
+        </div>
+        )
+
+      }
+    function Main(){
+        var  Style={
+            display:"flex",
+        }
+        return(
+        <div style={Style}>
+         <CreateCard image={"https://img.freepik.com/free-photo/happy-latin-businesswoman-standing-with-arms-crossed-against-isolated-background_662251-639.jpg"}
+
+          name={"siya"}/>
+          <CreateCard image={"https://img.freepik.com/free-photo/happy-latin-businesswoman-standing-with-arms-crossed-against-isolated-background_662251-639.jpg" }
+          name={"siya"}/>
+          <CreateCard image={"https://img.freepik.com/free-photo/happy-latin-businesswoman-standing-with-arms-crossed-against-isolated-background_662251-639.jpg" }
+          name={"siya"}/>
+         </div> 
+        );       
+    }
+ReactDOM.render(<Main/>,document.getElementById("root"));
+
+    </script>
+    
+</body>
+</html>
